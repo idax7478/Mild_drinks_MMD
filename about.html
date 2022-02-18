@@ -8,12 +8,58 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        #first_section {
+
+        img {
+  width: 100%;
+}
+
+#first_section {
   height: 65vh;
   width: 100%;
   background-image: url(fugle.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.bottombuttondiv {
+    text-align: center;
+
+}
+
+#fourth_section {
+  height: 45vh;
+  width: 100%;
+  background-image: url(drinkic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 20%;
+    padding-top: 7rem;
+  
+}
+
+#fourth_section a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#fourth_section h4 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.knap {
+background-color: white;
+  border: 2px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 h1, h2, h3 {
@@ -39,6 +85,15 @@ h3 {
 
 @media (min-width: 600px) {
 
+    #fourth_section {
+        padding-right: 15rem;
+
+    }
+
+    #fourth_section h4 {
+    font-size: 1.5rem;
+padding-bottom: 5px;}
+
 h1 {
     font-size: 2rem;
     padding-top: 5rem;
@@ -53,9 +108,66 @@ h3 {
     font-size: 1.6rem;
 }
 
+#second_section, #third_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-block: 1rem;
+    padding: 1rem;
+    
 }
 
+#second_section img, #third_section img {
+    height: 25rem;
+    object-fit: cover;
 
+}
+
+.text {
+    padding-inline: 1.5rem;
+    padding-top: 2rem;
+}
+
+.text h4 {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+}
+}
+
+@media (min-width: 1000px) {
+
+#fourth_section {
+        padding-right: 25rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+  #fourth_section h4 {
+    font-size: 1.5rem;
+  }
+
+  #fourth_section {
+      padding-top: 4rem;
+  }
+
+#third_section {
+    display: grid;
+}
+   #third_section .element_1 {
+    order: 2;
+  }
+
+  #third_section .element_2 {
+    order: 1;
+  }
+
+  #third_section .text, #second_section .text {
+    padding: 1rem;
+  }
+
+}
 
     </style>
 </head>
@@ -89,6 +201,47 @@ h3 {
 </section>
 
 
+<section id="second_section">
+
+    <div>
+        <img src="grncnria-2.jpg" alt="street">
+    </div>
+
+    <div class="text">
+        <h4>TEST 1</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur excepturi eligendi repellendus facere placeat! Adipisci quia unde magnam suscipit quod ipsa eaque consequuntur cumque, repudiandae reiciendis labore dolore, aut quisquam?</p>
+    </div>
+   
+
+</section>
+
+<section id="third_section">
+
+    <div class="text element_1">
+        <h4>TEST 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quaerat repellat quisquam id minima alias illo, nisi
+                    quasi eligendi! Officia eveniet assumenda natus aspernatur cumque.</p>
+
+    </div>
+
+    <div class="element_2">
+        <img src="grncnria-8.jpg" alt="street">
+    </div>
+
+
+</section>
+
+
+<section id="fourth_section">
+
+    <div class="bottombuttondiv">
+        <h4>READY TO BROWSE?</h4>
+        <ul>
+            <li class="knap"><a href="index.html">TO COCKTAILS</a></li>
+        </ul>
+    </div>
+
+</section>
 
 
 
