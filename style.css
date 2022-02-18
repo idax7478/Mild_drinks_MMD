@@ -1,10 +1,14 @@
-/* _________BURGER MENU__________________ */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+img {
+  width: 100%;
+}
+
+/* _________HEADER & BURGER MENU__________________ */
 
 .navbar {
   /* height: 12%; */
