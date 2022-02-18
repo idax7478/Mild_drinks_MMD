@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+</header>
+
+<body>
+
+    <nav>
+        <button class="filter valgt" data-kategori="alle">Alle</button>
+        <button class="filter" data-kategori="vodka">Vodka</button>
+        <button class="filter" data-kategori="rom">Rom</button>
+        <button class="filter" data-kategori="gin">Gin</button>
+        <button class="filter" data-kategori="whiskey">Whiskey</button>
+        <button class="filter" data-kategori="andet">Andet</button>
+
+    </nav>
+
+    <h1>Alle retter</h1>
+
+    <main></main>
+    <template>
+        <article class="grid">
+            <div class="image"><img src="" alt=""></div>
+
+            <h3></h3>
+            <p class="kort"></p>
+
+
+
+        </article>
+    </template>
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", hentData);
+
+        const url = "https://mildcocktails-71e4.restdb.io/rest/drinks";
+        const options = {
+            headers: {
+                'x-apikey': "620f694434fd6215658587b5"
+            }
+        }
+
+        const beholder = document.querySelector("main");
+        const template = document.querySelector("template");
+
+
+        let filter = "alle";
+        let drinks;
+
+
+        async function hentData() {
+            const respons = await fetch(url, options);
+            drinks = await respons.json();
+            console.log(drinks);
+            visJson(drinks);
+            addEventListenersToButtons();
+
+            const filterKnapper = document.querySelectorAll("nav button");
+            filterKnapper.forEach(knap => knap.addEventListener("click", filtrerDrinks));
+        }
+
+
+        function visJson(drink) {
+            const drinks = drink;
+            beholder.textContent = "";
+            drinks.forEach(drik => {
+                if (filter == drik.ingredienser || filter == "alle") {
+                    const klon = template.cloneNode(true).content;
+                    klon.querySelector("h3").textContent = drik.navn;
+                    console.log(drik.navn);
+                    klon.querySelector(".kort").textContent = drik.beskrivelse;
+                    klon.querySelector("img").src = "medium/" + drik.billednavn + "-md.jpg";
+                    klon.querySelector(".grid").addEventListener("click", () => visDetaljer(drik));
+                    beholder.appendChild(klon);
+                }
+            })
+
+        }
+
+        hentData(url);
+
+
+
+        function addEventListenersToButtons() {
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+        }
+        function filtrering() {
+            filter = this.dataset.kategori;
+            document.querySelector("h1").textContent = this.textContent;
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("valgt");
+            })
+            this.classList.add("valgt");
+            visJson();
+        }
+
+        function filtrerDrinks() {
+            filter = this.dataset.kategori;
+
+            visJson(drinks);
+        }
+
+        function visDetaljer(drik) {
+            location.href = `detalje.html?id=${drik._id}`;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
+
+<body>
+
+</body>
+
+</html>
