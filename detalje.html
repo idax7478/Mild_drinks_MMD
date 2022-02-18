@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <article class="grid">
+        <img src="" alt="">
+
+        <section>
+            <h2></h2>
+            <h3>Ingredienser</h3>
+            <p class="ingredienser"></p>
+            <h3>Opskrift</h3>
+            <p class="opskrift"></p>
+            <h3>Historie</h3>
+            <p class="oprindelse"></p>
+            <button><a href="index.html">Tilbage</a> </button>
+        </section>
+
+    </article>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        const medieurl = "https://mildcocktails-71e4.restdb.io/rest/drinks";
+        let drink;
+        const options = {
+            "x-apikey": "620f694434fd6215658587b5"
+        }
+
+
+        // console.log("ID", id);
+        document.addEventListener("DOMContentLoaded", loadJson);
+
+        async function loadJson() {
+            const jsonData = await fetch(`https://mildcocktails-71e4.restdb.io/rest/drinks/${id}`, {
+                headers: options
+            });
+            drink = await jsonData.json();
+
+            visDrink(drink);
+            console.log(drink);
+        }
+
+        function visDrink() {
+            document.querySelector("h2").textContent = drink.navn;
+            // console.log(madret.navn);
+            document.querySelector(".ingredienser").textContent = drink.ingredienser;
+            document.querySelector("img").src = "billeder/" + drink.billede;
+            document.querySelector(".opskrift").textContent = drink.opskrift;
+            document.querySelector(".oprindelse").textContent = drink.oprindelse;
+        }
+
+    </script>
+
+</body>
+
+</html>

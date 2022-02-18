@@ -69,11 +69,10 @@
         }
 
 
-        function visJson(drink) {
-            const drinks = drink;
+        function visJson(x) {
             beholder.textContent = "";
-            drinks.forEach(drik => {
-                if (filter == drik.ingredienser || filter == "alle") {
+            x.forEach(drik => {
+                if (drik.ingredienser.toLowerCase().includes(filter) || filter == "alle") {
                     const klon = template.cloneNode(true).content;
                     klon.querySelector("h3").textContent = drik.navn;
                     console.log(drik.navn);
