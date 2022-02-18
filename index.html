@@ -73,7 +73,9 @@
             const drinks = drink;
             beholder.textContent = "";
             drinks.forEach(drik => {
-                if (filter == drik.ingredienser || filter == "alle") {
+                let drinksIngredienser = drink.ingredienser;
+                console.log(drink)
+                if (drinksIngredienser.toLowerCase().includes("vodka")) {
                     const klon = template.cloneNode(true).content;
                     klon.querySelector("h3").textContent = drik.navn;
                     console.log(drik.navn);
