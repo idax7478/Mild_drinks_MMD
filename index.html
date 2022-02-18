@@ -78,7 +78,7 @@
                     klon.querySelector("h3").textContent = drik.navn;
                     console.log(drik.navn);
                     klon.querySelector(".kort").textContent = drik.beskrivelse;
-                    klon.querySelector("img").src = "medium/" + drik.billede + "-md.jpg";
+                    klon.querySelector("img").src = "billeder/" + drik.billede;
                     klon.querySelector(".grid").addEventListener("click", () => visDetaljer(drik));
                     beholder.appendChild(klon);
                 }
