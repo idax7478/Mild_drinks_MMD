@@ -175,9 +175,15 @@ footer {
 @media (max-width: 600px) {
   .logo2 {
     width: 60px;
+    margin-left: 1.2rem;
   }
 
   .footer2 {
     padding-bottom: 1rem;
+  }
+
+  .footer1,
+  .footer2 {
+    font-size: 0.7rem;
   }
 }
