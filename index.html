@@ -12,6 +12,184 @@
     img {
         max-width: 300px;
     }
+
+    p {
+        font-family: charter;
+        line-height: 1.3;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: din alternate;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+    }
+
+    .h1 {
+        text-align: center;
+        padding-bottom: 2%;
+        background-color: white;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    #overskriftdata h1 {
+        padding-top: 2%;
+    }
+
+    #overskriftdata {
+        text-align: center;
+        background-color: white;
+    }
+
+    #overskriftdata h3 {
+        color: #9D02FD;
+    }
+
+    @media (min-width: 600px) {
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .grid:hover {
+        border: 4px #9D02FD;
+        color: #9D02FD;
+        cursor: pointer;
+    }
+
+    .grid {
+        margin: 1.5rem;
+        padding: 2%;
+        background-color: white;
+    }
+
+    .grid h3 {
+        margin-top: 3%;
+        margin-bottom: 2%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .grid p {
+        text-align: center;
+    }
+
+    body {
+        /* background: -webkit-linear-gradient(to top, #FBD786, #C6FFDD);
+        background: linear-gradient(to top, #FBD786, #C6FFDD); */
+        background-image: url(/leaf.png);
+    }
+
+    .image {
+        background-color: rgb(244, 221, 144);
+        width: 100%;
+        object-fit: cover;
+        align-self: center;
+    }
+
+    #splash {
+        display: grid;
+        height: 50vh;
+        width: 100%;
+        background-image: url(splash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-origin: initial;
+        place-items: center;
+    }
+
+    #splash h2 {
+        font-size: 4rem;
+    }
+
+    #splash h3 {
+        font-size: 1.3rem;
+    }
+
+    @media (min-width: 650px) {
+        #splash h2 {
+            font-size: 5rem;
+        }
+
+        #splash h3 {
+            font-size: 3rem;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        #splash h2 {
+            font-size: 6rem;
+        }
+
+        #splash h3 {
+            font-size: 5rem;
+        }
+    }
+
+    #welcome {
+        margin: 1.5rem;
+        padding: 2%;
+        background-color: white;
+        text-align: center;
+    }
+
+    #welcome h2 {
+        font-size: 2rem;
+        padding-bottom: 1%;
+    }
+
+    .filternav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        background-color: white;
+    }
+
+    @media (min-width: 600px) {
+
+        .filternav {
+            flex-direction: row;
+        }
+    }
+
+    button {
+        font-family: din alternate;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 10px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        border-radius: 0;
+        border: 1%;
+        background-color: white;
+        border-color: #9D02FD;
+        text-decoration: #9D02FD;
+    }
+
+    button:hover {
+        background-color: #9D02FD;
+        color: white;
+    }
+
+    button:active {
+        background-color: #9D02FD;
+        color: white;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
 </style>
 </header>
 
@@ -35,7 +213,26 @@
         </nav>
     </header>
 
-    <nav>
+    <section id="splash">
+        <h2>MILD</h2>
+        <h3>YOUR BEVERAGE DATABASE</h3>
+    </section>
+
+    <section id="welcome">
+        <h2>WELCOME!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat dolorem itaque cupiditate quis tempore
+            fugiat est iure soluta doloribus quibusdam ipsum deleniti, officiis eveniet quia nisi reprehenderit harum
+            sit nulla et modi nostrum animi alias ad veritatis. Id ab iusto, ullam dolorem repellat vitae error! Dolore
+            exercitationem deleniti consectetur sit.</p>
+        <button><a href="about.html">vores mission</a></button>
+    </section>
+
+    <section id="overskriftdata">
+        <h1>the mild database</h1>
+        <h3>vælg en startingrediens</h3>
+    </section>
+
+    <nav class="filternav">
         <button class="filter valgt" data-kategori="alle">Alle</button>
         <button class="filter" data-kategori="vodka">Vodka</button>
         <button class="filter" data-kategori="rom">Rom</button>
@@ -45,7 +242,7 @@
 
     </nav>
 
-    <h1>Alle</h1>
+    <h1 class="h1">Alle</h1>
 
     <main></main>
     <section>
@@ -121,7 +318,7 @@
         }
         function filtrering() {
             filter = this.dataset.kategori;
-            document.querySelector("h1").textContent = this.textContent;
+            document.querySelector(".h1").textContent = this.textContent;
             document.querySelectorAll(".filter").forEach(elm => {
                 elm.classList.remove("valgt");
             })
