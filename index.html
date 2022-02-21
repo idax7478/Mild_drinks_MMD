@@ -5,11 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+<style>
+    img {
+        max-width: 300px;
+    }
+</style>
 </header>
 
 <body>
+    <header class="navbar">
+        <a href="index.html">
+            <img src="logo_mild_roed.svg" class="logo" alt="logo" />
+        </a>
+        <nav class="nav">
+            <ul class="menu">
+                <li class="nav-item"> <a href="index.html">HOME</a></li>
+                <li class="nav-item"> <a href="about.html">ABOUT</a></li>
+
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
     <nav>
         <button class="filter valgt" data-kategori="alle">Alle</button>
@@ -24,18 +48,19 @@
     <h1>Alle</h1>
 
     <main></main>
-    <template>
-        <article class="grid">
-            <div class="image"><img src="" alt=""></div>
+    <section>
+        <template>
+            <article class="grid">
+                <div class="image"><img src="" alt=""></div>
 
-            <h3></h3>
-            <p class="kort"></p>
+                <h3></h3>
+                <p class="kort"></p>
 
 
 
-        </article>
-    </template>
-
+            </article>
+        </template>
+    </section>
 
 
     <script>
