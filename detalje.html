@@ -5,13 +5,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Drink</title>
+
+    <style>
+
+        .grid {
+            display: grid;
+            grid-template-columns: 0.7fr 1fr;
+            margin-top: 4rem;
+            margin-inline: 7rem;
+            background-color: rgb(244, 221, 144);
+            margin-bottom: 7rem;
+            }
+
+
+            h2 {
+                margin-top: 3rem;
+                margin-bottom: 2rem;
+                text-align: center;
+                
+            }
+
+            h3{
+                padding-left: 2rem;
+                padding-bottom: 0.2rem;
+            }
+
+            .grid p {
+       
+                padding-right: 4rem;
+                padding-left: 2rem;
+            }
+
+            .ingredienser, .opskrift {
+                         margin-bottom: 3rem;
+            }
+
+            .image{
+                background-color: rgb(244, 221, 144);
+                width: 100%;
+                object-fit: cover;
+                align-self: center;
+                
+            }
+
+            body {
+                background-image: url(leaf.png);
+            }
+        
+            section {
+                background-color: white;
+            }
+
+            .cont {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 2rem;
+                padding-top: 2rem;
+                padding-bottom: 1rem;
+               
+            }
+
+            button {
+             background-color: rgb(212, 244, 197);
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition-duration: 0.4s;
+            box-shadow: 0 3px 5px  rgba(0,0,0,0.3);
+            }
+
+            button:hover {
+                transform: scale(1.1);
+            }
+
+            button a {
+            text-decoration: none;
+            color: #000000;
+            }
+
+            article {
+                box-shadow: 0 3px 5px  rgba(0,0,0,0.3);
+            }
+
+     @media (max-width: 900px) {
+
+            .grid {
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: auto;
+            }    
+
+            button {
+            padding: 10px 21px;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            }
+
+
+            .cont {
+                justify-content: center;
+                padding-right: 0;
+            }
+
+            .grid p {
+       
+                padding-right: 2rem;
+                padding-left: 2rem;
+            }
+
+    }
+
+            
+
+    </style>
 </head>
 
 <body>
 
+    <header class="navbar">
+        <a href="index.html">
+            <img src="logo_mild_roed.svg" class="logo" alt="logo" />
+        </a>
+        <nav class="nav">
+            <ul class="menu">
+                <li class="nav-item"> <a href="index.html">HOME</a></li>
+                <li class="nav-item"> <a href="about.html">ABOUT</a></li>
+    
+            </ul>
+    
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    
     <article class="grid">
-        <img src="" alt="">
+        <img class="image" src="" alt="">
 
         <section>
             <h2></h2>
@@ -21,10 +164,23 @@
             <p class="opskrift"></p>
             <h3>Historie</h3>
             <p class="oprindelse"></p>
+            <div class="cont">
             <button><a href="index.html">Tilbage</a> </button>
+            </div>
         </section>
 
     </article>
+
+
+    <footer>
+        <a href="index.html">
+        <img src="logo_mild_roed.svg" class="logo2" alt="logo2" />
+        </a>
+        <h4 class="footer1">Mild Cocktail Database</h4>
+        <h5 class="footer2">Copenhagen, Denmark</h5>
+    </footer>
+
+
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -54,7 +210,7 @@
             document.querySelector("h2").textContent = drink.navn;
             // console.log(madret.navn);
             document.querySelector(".ingredienser").textContent = drink.ingredienser;
-            document.querySelector("img").src = "billeder/" + drink.billede;
+            document.querySelector(".image").src = "billeder/" + drink.billede;
             document.querySelector(".opskrift").textContent = drink.opskrift;
             document.querySelector(".oprindelse").textContent = drink.oprindelse;
         }

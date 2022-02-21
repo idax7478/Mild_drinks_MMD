@@ -147,3 +147,37 @@ ul li a:hover {
     width: 40px;
   }
 }
+
+/* _____________FOOTER____________________ */
+
+.logo2 {
+  width: 80px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-left: 2.5rem;
+}
+
+footer {
+  background-color: rgb(244, 221, 144);
+}
+
+.footer1,
+.footer2 {
+  margin-left: 1rem;
+}
+
+.footer2 {
+  font-weight: normal;
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .logo2 {
+    width: 60px;
+  }
+
+  .footer2 {
+    padding-bottom: 1rem;
+  }
+}
