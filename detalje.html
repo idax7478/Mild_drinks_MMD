@@ -224,8 +224,11 @@
                 headers: options
             });
             drink = await jsonData.json();
+
+            /*Omskrive \n til <br>: Sætte ingredienser i listeform*/
             ingredienser = drink.ingredienser.replace(/\n/g, "<br>")
-            console.log(ingredienser)
+            // console.log(ingredienser)
+
             visDrink(drink);
             console.log(drink);
         }

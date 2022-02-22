@@ -12,186 +12,186 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
     <title>MILD: Your Drink Database</title>
 
-<style>
-    img {
-        max-width: 300px;
-    }
-
-    p {
-        font-family: source serif pro;
-        line-height: 1.3;
-        padding-left: 2%;
-        padding-right: 2%;
-    }
-
-    h1,
-    h2,
-    h3 {
-        font-family: barlow;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-
-    }
-
-    .h1 {
-        text-align: center;
-        padding-bottom: 2%;
-        background-color: white;
-        font-size: 2rem;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    #overskriftdata h1 {
-        padding-top: 2%;
-    }
-
-    #overskriftdata {
-        text-align: center;
-        background-color: white;
-    }
-
-    #overskriftdata h3 {
-        color: rgb(250, 115, 115);
-    }
-
-    @media (min-width: 600px) {
-
-        main {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-    }
-
-    .grid:hover {
-        border: 4px rgb(250, 115, 115);
-        color: rgb(250, 115, 115);
-        cursor: pointer;
-    }
-
-    .grid {
-        margin: 1.5rem;
-        padding: 2%;
-        background-color: white;
-    }
-
-    .grid h3 {
-        margin-top: 3%;
-        margin-bottom: 2%;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    .grid p {
-        text-align: center;
-    }
-
-    main {
-        background: -webkit-linear-gradient(to top, rgb(250, 115, 115), #C6FFDD);
-        background: linear-gradient(to top, rgb(250, 115, 115), #C6FFDD);
-        /* background-image: url(/leaf.png); */
-    }
-
-    .image {
-        background-color: rgb(244, 221, 144);
-    }
-
-    .image img {
-        background-color: rgb(244, 221, 144);
-        width: 100%;
-        object-fit: cover;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #splash {
-        display: grid;
-        height: 65vh;
-        width: 100%;
-        background-image: url(fugle.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        place-items: center;
-        text-align: center;
-        text-shadow: 5px 2px 5px #1b1b1b;
-    }
-
-    #splash h2 {
-        font-size: 4rem;
-        color: white;
-        font-weight: bolder;
-    }
-
-    #splash h3 {
-        font-size: 1.3rem;
-        color: rgb(250, 115, 115);
-        font-family: source serif pro;
-        text-transform: lowercase;
-    }
-
-    @media (min-width: 650px) {
-        #splash h2 {
-            font-size: 5rem;
+    <style>
+        img {
+            max-width: 300px;
         }
 
-        #splash h3 {
+        p {
+            font-family: source serif pro;
+            line-height: 1.3;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: barlow;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+        }
+
+        .h1 {
+            text-align: center;
+            padding-bottom: 2%;
+            background-color: white;
+            font-size: 2rem;
+        }
+
+        h1 {
             font-size: 3rem;
         }
-    }
 
-    @media (min-width: 1000px) {
+        #overskriftdata h1 {
+            padding-top: 2%;
+        }
+
+        #overskriftdata {
+            text-align: center;
+            background-color: white;
+        }
+
+        #overskriftdata h3 {
+            color: rgb(250, 115, 115);
+        }
+
+        @media (min-width: 600px) {
+
+            main {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .grid:hover {
+            border: 4px rgb(250, 115, 115);
+            color: rgb(250, 115, 115);
+            cursor: pointer;
+        }
+
+        .grid {
+            margin: 1.5rem;
+            padding: 2%;
+            background-color: white;
+        }
+
+        .grid h3 {
+            margin-top: 3%;
+            margin-bottom: 2%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .grid p {
+            text-align: center;
+        }
+
+        main {
+            background: -webkit-linear-gradient(to top, rgb(250, 115, 115), #C6FFDD);
+            background: linear-gradient(to top, rgb(250, 115, 115), #C6FFDD);
+            /* background-image: url(/leaf.png); */
+        }
+
+        .image {
+            background-color: rgb(244, 221, 144);
+        }
+
+        .image img {
+            background-color: rgb(244, 221, 144);
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #splash {
+            display: grid;
+            height: 65vh;
+            width: 100%;
+            background-image: url(fugle.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            place-items: center;
+            text-align: center;
+            text-shadow: 5px 2px 5px #1b1b1b;
+        }
+
         #splash h2 {
-            font-size: 7rem;
+            font-size: 4rem;
+            color: white;
+            font-weight: bolder;
         }
 
         #splash h3 {
-            font-size: 4rem;
+            font-size: 1.3rem;
+            color: rgb(250, 115, 115);
+            font-family: source serif pro;
+            text-transform: lowercase;
         }
-    }
 
-    .filternav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        background-color: white;
-    }
+        @media (min-width: 650px) {
+            #splash h2 {
+                font-size: 5rem;
+            }
 
-    @media (min-width: 600px) {
+            #splash h3 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            #splash h2 {
+                font-size: 7rem;
+            }
+
+            #splash h3 {
+                font-size: 4rem;
+            }
+        }
 
         .filternav {
-            flex-direction: row;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            background-color: white;
         }
-    }
 
-    button {
-        font-family: barlow;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        padding: 10px;
-        margin-top: 2%;
-        margin-bottom: 2%;
-        border-radius: 0;
-        border-style: solid;
-        border: 1%;
-        background-color: white;
-        border-color: rgb(250, 115, 115);
-        text-decoration: rgb(250, 115, 115);
-    }
+        @media (min-width: 600px) {
 
-    button:hover {
-        background-color: rgb(250, 115, 115);
-        color: white;
-    }
+            .filternav {
+                flex-direction: row;
+            }
+        }
 
-    .valgt {
-        background-color: rgb(250, 115, 115);
-        color: white;
-    }
-</style>
+        button {
+            font-family: barlow;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 10px;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            border-radius: 0;
+            border-style: solid;
+            border: 1%;
+            background-color: white;
+            border-color: rgb(250, 115, 115);
+            text-decoration: rgb(250, 115, 115);
+        }
+
+        button:hover {
+            background-color: rgb(250, 115, 115);
+            color: white;
+        }
+
+        .valgt {
+            background-color: rgb(250, 115, 115);
+            color: white;
+        }
+    </style>
 </head>
 
 
@@ -223,7 +223,7 @@
     </section>
 
     <section id="overskriftdata">
-        <h1>the mild database</h1>
+        <h1>mild cocktail database</h1>
         <h3>vælg en startingrediens</h3>
     </section>
 
@@ -254,23 +254,23 @@
         </template>
     </section>
 
-<footer>
+    <footer>
 
-    <a href="index.html">
-        <img src="logo_mild_roed.svg" class="logo2" alt="logo2" />
-    </a>
+        <a href="index.html">
+            <img src="logo_mild_roed.svg" class="logo2" alt="logo2" />
+        </a>
 
-    <div class="footertext">
-        <h4 class="footer1">Mild Cocktail Database</h4>
+        <div class="footertext">
+            <h4 class="footer1">Mild Cocktail Database</h4>
 
-        <h5 class="footer2">Copenhagen, Denmark</h5>
+            <h5 class="footer2">Copenhagen, Denmark</h5>
 
-    </div>
-
-
+        </div>
 
 
-</footer>
+
+
+    </footer>
 
 
     <script>
