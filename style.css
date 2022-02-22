@@ -159,13 +159,17 @@ ul li a:hover {
 }
 
 footer {
-  background-color: white;
+  /* background-color: white;
   display: flex;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .footertext {
   margin: 0 auto;
+  padding-top: 2rem;
+  text-align: center;
 }
 
 .footer1,
@@ -176,21 +180,65 @@ footer {
   font-weight: normal;
   font-size: 1rem;
   padding-bottom: 0.5rem;
-  margin-right: 6rem;
+}
+
+.partthree {
+  justify-self: right;
+  padding-right: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  font-family: "Merriweather", serif;
+  padding-top: 2rem;
+}
+
+.partthree img {
+  width: 20%;
+  height: auto;
+}
+
+.partthree img:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
+  .footlogo {
+    text-align: center;
+  }
+
   .logo2 {
-    width: 60px;
-    margin-left: 1.2rem;
+    margin: 0;
+    padding-top: 1rem;
+  }
+
+  footer {
+    display: block;
   }
 
   .footer2 {
     padding-bottom: 1rem;
+    margin-inline: 0;
   }
 
   .footer1,
   .footer2 {
     font-size: 0.7rem;
+  }
+
+  .partthree {
+    justify-self: center;
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 1.5rem;
+    padding-right: 0;
+  }
+
+  .partthree img {
+    width: 7%;
+    height: auto;
+    padding-top: 0.1rem;
+    padding-inline: 0.1rem;
   }
 }
