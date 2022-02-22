@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
     <title>Drink</title>
 
     <style>
-
         .grid {
             display: grid;
             grid-template-columns: 0.7fr 1fr;
@@ -17,58 +18,59 @@
             margin-inline: 7rem;
             background-color: rgb(244, 221, 144);
             margin-bottom: 7rem;
-            }
+        }
 
 
-            h2 {
-                margin-top: 3rem;
-                margin-bottom: 2rem;
-                text-align: center;
-                
-            }
+        h2 {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
 
-            h3{
-                padding-left: 2rem;
-                padding-bottom: 0.2rem;
-            }
+        }
 
-            .grid p {
-       
-                padding-right: 4rem;
-                padding-left: 2rem;
-            }
+        h3 {
+            padding-left: 2rem;
+            padding-bottom: 0.2rem;
+        }
 
-            .ingredienser, .opskrift {
-                         margin-bottom: 3rem;
-            }
+        .grid p {
 
-            .image{
-                background-color: rgb(244, 221, 144);
-                width: 100%;
-                object-fit: cover;
-                align-self: center;
-                
-            }
+            padding-right: 4rem;
+            padding-left: 2rem;
+        }
 
-            body {
-                background-image: url(leaf.png);
-            }
-        
-            section {
-                background-color: white;
-            }
+        .ingredienser,
+        .opskrift {
+            margin-bottom: 3rem;
+        }
 
-            .cont {
-                display: flex;
-                justify-content: flex-end;
-                padding-right: 2rem;
-                padding-top: 2rem;
-                padding-bottom: 1rem;
-               
-            }
+        .image {
+            background-color: rgb(244, 221, 144);
+            width: 100%;
+            object-fit: cover;
+            align-self: center;
 
-            button {
-             background-color: rgb(212, 244, 197);
+        }
+
+        body {
+            background-image: url(leaf.png);
+        }
+
+        section {
+            background-color: white;
+        }
+
+        .cont {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+
+        }
+
+        button {
+            background-color: rgb(212, 244, 197);
             border: none;
             color: black;
             padding: 15px 32px;
@@ -79,36 +81,36 @@
             cursor: pointer;
             border-radius: 4px;
             transition-duration: 0.4s;
-            box-shadow: 0 3px 5px  rgba(0,0,0,0.3);
-            }
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+        }
 
-            button:hover {
-                transform: scale(1.1);
-            }
+        button:hover {
+            transform: scale(1.1);
+        }
 
-            button a {
+        button a {
             text-decoration: none;
             color: #000000;
-            }
+        }
 
-            article {
-                box-shadow: 0 3px 5px  rgba(0,0,0,0.3);
-                
-            }
+        article {
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 
-            .emg {
-                /*Place self center centrerer elementet i grid*/
+        }
+
+        .emg {
+            /*Place self center centrerer elementet i grid*/
             place-self: center;
             padding: 1rem;
-            }
+        }
 
-     @media (max-width: 900px) {
+        @media (max-width: 900px) {
 
             .grid {
-            display: grid;
-            grid-template-columns: none;
-            grid-template-rows: auto;
-            }    
+                display: grid;
+                grid-template-columns: none;
+                grid-template-rows: auto;
+            }
 
             .emg {
                 padding: 3rem;
@@ -116,11 +118,11 @@
 
 
             button {
-            padding: 10px 21px;
-            font-size: 12px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
+                padding: 10px 21px;
+                font-size: 12px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 4px;
             }
 
 
@@ -130,15 +132,12 @@
             }
 
             .grid p {
-       
+
                 padding-right: 2rem;
                 padding-left: 2rem;
             }
 
-    }
-
-            
-
+        }
     </style>
 </head>
 
@@ -152,9 +151,9 @@
             <ul class="menu">
                 <li class="nav-item"> <a href="index.html">HOME</a></li>
                 <li class="nav-item"> <a href="about.html">ABOUT</a></li>
-    
+
             </ul>
-    
+
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -164,10 +163,10 @@
     </header>
 
 
-    
+
     <article class="grid">
         <div class="emg">
-        <img class="image" src="" alt="">
+            <img class="image" src="" alt="">
         </div>
 
         <section>
@@ -179,7 +178,7 @@
             <h3>Historie</h3>
             <p class="oprindelse"></p>
             <div class="cont">
-            <button><a href="index.html">Tilbage</a> </button>
+                <button><a href="index.html">Tilbage</a> </button>
             </div>
         </section>
 
@@ -187,12 +186,34 @@
 
 
     <footer>
-        <a href="index.html">
-        <img src="logo_mild_roed.svg" class="logo2" alt="logo2" />
-        </a>
-        <h4 class="footer1">Mild Cocktail Database</h4>
-        <h5 class="footer2">Copenhagen, Denmark</h5>
-    </footer>
+    
+        <div class="footlogo">
+            <a href="index.html">
+                <img src="logo_mild_roed.svg" class="logo2" alt="logo2" />
+            </a>
+        </div>
+    
+        <div class="footertext">
+            <h4 class="footer1">Mild Cocktail Database</h4>
+            <h5">Tranebærsaftvej 173.</h5>
+                <h5 class="footer2">Copenhagen, Denmark</h5>
+        </div>
+    
+        <div class="partthree">
+            <h4>Find out more</h4>
+    
+            <a href="https://www.facebook.com/kea.dk">
+                <img class="fejs" src="fjsbk.svg" alt="fb"></a>
+    
+            <a href="https://www.instagram.com/keacph/?hl=da">
+                <img src="instgrm.svg" alt="insta"></a>
+    
+            <a href="https://www.linkedin.com/school/kea-k-benhavns-erhvervsakademi/">
+                <img src="lnkdin.svg" alt="linked"></a>
+    
+            <a href="https://www.youtube.com/c/KEAkanal">
+                <img src="yutub.svg" alt="yutub"></a>
+        </div>
 
 
 
@@ -206,6 +227,8 @@
             "x-apikey": "620f694434fd6215658587b5"
         }
 
+        let ingredienser;
+
 
         // console.log("ID", id);
         document.addEventListener("DOMContentLoaded", loadJson);
@@ -216,6 +239,10 @@
             });
             drink = await jsonData.json();
 
+            /*Omskrive \n til <br>: Sætte ingredienser i listeform*/
+            ingredienser = drink.ingredienser.replace(/\n/g, "<br>")
+            // console.log(ingredienser)
+
             visDrink(drink);
             console.log(drink);
         }
@@ -223,13 +250,13 @@
         function visDrink() {
             document.querySelector("h2").textContent = drink.navn;
             // console.log(madret.navn);
-            document.querySelector(".ingredienser").textContent = drink.ingredienser;
+            document.querySelector(".ingredienser").innerHTML = ingredienser;
             document.querySelector(".image").src = "billeder/" + drink.billede;
             document.querySelector(".opskrift").textContent = drink.opskrift;
             document.querySelector(".oprindelse").textContent = drink.oprindelse;
         }
 
-        
+
     </script>
     <script src="java.js"></script>
 
