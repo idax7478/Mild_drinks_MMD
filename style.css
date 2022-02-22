@@ -159,7 +159,7 @@ ul li a:hover {
 }
 
 footer {
-  background-color: rgb(244, 221, 144);
+  background-color: white;
   display: flex;
   align-items: center;
 }

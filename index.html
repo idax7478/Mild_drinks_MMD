@@ -6,23 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charter-webfont@4/charter.min.css" />
-    <title>Document</title>
-</head>
-<style>
-    @font-face {
-        font-family: 'DIN Alternate Bold';
-        font-style: normal;
-        font-weight: normal;
-        src: local('DIN Alternate Bold'), url('DINAlternate-Bold.woff') format('woff');
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+    <title>MILD: Your Drink Database</title>
 
+<style>
     img {
         max-width: 300px;
     }
 
     p {
-        font-family: charter;
+        font-family: source serif pro;
         line-height: 1.3;
         padding-left: 2%;
         padding-right: 2%;
@@ -31,7 +27,7 @@
     h1,
     h2,
     h3 {
-        font-family: 'DIN Alternate Bold';
+        font-family: barlow;
         letter-spacing: 2px;
         text-transform: uppercase;
 
@@ -58,7 +54,7 @@
     }
 
     #overskriftdata h3 {
-        color: #9D02FD;
+        color: rgb(250, 115, 115);
     }
 
     @media (min-width: 600px) {
@@ -70,8 +66,8 @@
     }
 
     .grid:hover {
-        border: 4px #9D02FD;
-        color: #9D02FD;
+        border: 4px rgb(250, 115, 115);
+        color: rgb(250, 115, 115);
         cursor: pointer;
     }
 
@@ -92,43 +88,48 @@
         text-align: center;
     }
 
-    body {
-        /* background: -webkit-linear-gradient(to top, #FBD786, #C6FFDD);
-        background: linear-gradient(to top, #FBD786, #C6FFDD); */
-        background-image: url(/leaf.png);
+    main {
+        background: -webkit-linear-gradient(to top, rgb(250, 115, 115), #C6FFDD);
+        background: linear-gradient(to top, rgb(250, 115, 115), #C6FFDD);
+        /* background-image: url(/leaf.png); */
     }
 
     .image {
         background-color: rgb(244, 221, 144);
+    }
+
+    .image img {
+        background-color: rgb(244, 221, 144);
         width: 100%;
         object-fit: cover;
-        align-self: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #splash {
         display: grid;
-        height: 30rem;
+        height: 65vh;
         width: 100%;
-        background-image: url(splash.jpg);
-        background-position: 50% 55%;
+        background-image: url(fugle.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-origin: initial;
         place-items: center;
+        text-align: center;
+        text-shadow: 5px 2px 5px #1b1b1b;
     }
 
     #splash h2 {
         font-size: 4rem;
         color: white;
-           text-shadow: 2px 2px 8px #000000;
-           padding-top: 2rem;
-
+        font-weight: bolder;
     }
 
     #splash h3 {
         font-size: 1.3rem;
-        color: white;
-        text-shadow: 2px 2px 8px #000000;
+        color: rgb(250, 115, 115);
+        font-family: source serif pro;
+        text-transform: lowercase;
     }
 
     @media (min-width: 650px) {
@@ -147,37 +148,9 @@
         }
 
         #splash h3 {
-            font-size: 3rem;
+            font-size: 4rem;
         }
     }
-
-    .bgrnd {
-        background-image: url("bgr.jpg");
-          background-repeat: no-repeat;
-           background-size: cover; 
-           background-attachment: fixed;
-        background-position: center;
-
-        
-    }
-
-    #welcome {
-        padding: 2rem;
-        text-align: center;
-    }
-
-    .white {
-          background-color: rgba(255, 255, 255, 0.5);
-          padding-inline: 2rem;
-          padding-block: 1rem;
-          margin-inline: 10rem;
-    }
-
-    #welcome h2 {
-        font-size: 2rem;
-        padding-bottom: 1%;
-    }
-    
 
     .filternav {
         display: flex;
@@ -195,34 +168,32 @@
     }
 
     button {
-        font-family: din alternate;
+        font-family: barlow;
         letter-spacing: 2px;
         text-transform: uppercase;
         padding: 10px;
         margin-top: 2%;
         margin-bottom: 2%;
         border-radius: 0;
+        border-style: solid;
         border: 1%;
         background-color: white;
-        border-color: #9D02FD;
-        text-decoration: #9D02FD;
+        border-color: rgb(250, 115, 115);
+        text-decoration: rgb(250, 115, 115);
     }
 
     button:hover {
-        background-color: #9D02FD;
+        background-color: rgb(250, 115, 115);
         color: white;
     }
 
-    button:active {
-        background-color: #9D02FD;
+    .valgt {
+        background-color: rgb(250, 115, 115);
         color: white;
-    }
-
-    a:link {
-        text-decoration: none;
     }
 </style>
-</header>
+</head>
+
 
 <body>
     <header class="navbar">
@@ -245,19 +216,10 @@
     </header>
 
     <section id="splash">
-        <h2>MILD</h2>
-        <h3>YOUR BEVERAGE DATABASE</h3>
-    </section>
-
-    <section class="bgrnd">
-    <article id="welcome">
-        <div class="white">
-        <h2>WELCOME!</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat dolorem itaque cupiditate quis tempore
-            fugiat est iure soluta doloribus quibusdam ipsum deleniti.</p>
-        <button><a href="about.html">vores mission</a></button>
+        <div class="section_wrapper">
+            <h2>WE ARE MILD</h2>
+            <h3>but your cocktails don't have to be</h3>
         </div>
-        </article>
     </section>
 
     <section id="overskriftdata">
@@ -292,6 +254,24 @@
         </template>
     </section>
 
+<footer>
+
+    <a href="index.html">
+        <img src="logo_mild_roed.svg" class="logo2" alt="logo2" />
+    </a>
+
+    <div class="footertext">
+        <h4 class="footer1">Mild Cocktail Database</h4>
+
+        <h5 class="footer2">Copenhagen, Denmark</h5>
+
+    </div>
+
+
+
+
+</footer>
+
 
     <script>
 
@@ -307,7 +287,7 @@
         const beholder = document.querySelector("main");
         const template = document.querySelector("template");
 
-
+        let andet = "andet";
         let filter = "alle";
         let drinks;
 
@@ -327,11 +307,11 @@
         function visJson(x) {
             beholder.textContent = "";
             x.forEach(drik => {
-                if (drik.ingredienser.toLowerCase().includes(filter) || filter == "alle") {
+                if (drik.ingredienser.toLowerCase().includes(filter) || filter == "alle" || andet == drik.kategori) {
                     const klon = template.cloneNode(true).content;
                     klon.querySelector("h3").textContent = drik.navn;
                     console.log(drik.navn);
-                    klon.querySelector(".kort").textContent = drik.beskrivelse;
+                    // klon.querySelector(".kort").textContent = drik.beskrivelse;
                     klon.querySelector("img").src = "billeder/" + drik.billede;
                     klon.querySelector(".grid").addEventListener("click", () => visDetaljer(drik));
                     beholder.appendChild(klon);
@@ -372,6 +352,7 @@
 
 
     </script>
+    <script src="java.js"></script>
 </body>
 
 </html>
