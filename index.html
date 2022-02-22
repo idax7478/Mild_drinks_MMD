@@ -107,9 +107,10 @@
 
     #splash {
         display: grid;
-        height: 50vh;
+        height: 30rem;
         width: 100%;
         background-image: url(splash.jpg);
+        background-position: 50% 55%;
         background-size: cover;
         background-repeat: no-repeat;
         background-origin: initial;
@@ -118,10 +119,16 @@
 
     #splash h2 {
         font-size: 4rem;
+        color: white;
+           text-shadow: 2px 2px 8px #000000;
+           padding-top: 2rem;
+
     }
 
     #splash h3 {
         font-size: 1.3rem;
+        color: white;
+        text-shadow: 2px 2px 8px #000000;
     }
 
     @media (min-width: 650px) {
@@ -136,25 +143,41 @@
 
     @media (min-width: 1000px) {
         #splash h2 {
-            font-size: 6rem;
+            font-size: 7rem;
         }
 
         #splash h3 {
-            font-size: 5rem;
+            font-size: 3rem;
         }
     }
 
+    .bgrnd {
+        background-image: url("bgr.jpg");
+          background-repeat: no-repeat;
+           background-size: cover; 
+           background-attachment: fixed;
+        background-position: center;
+
+        
+    }
+
     #welcome {
-        margin: 1.5rem;
-        padding: 2%;
-        background-color: white;
+        padding: 2rem;
         text-align: center;
+    }
+
+    .white {
+          background-color: rgba(255, 255, 255, 0.5);
+          padding-inline: 2rem;
+          padding-block: 1rem;
+          margin-inline: 10rem;
     }
 
     #welcome h2 {
         font-size: 2rem;
         padding-bottom: 1%;
     }
+    
 
     .filternav {
         display: flex;
@@ -226,13 +249,15 @@
         <h3>YOUR BEVERAGE DATABASE</h3>
     </section>
 
-    <section id="welcome">
+    <section class="bgrnd">
+    <article id="welcome">
+        <div class="white">
         <h2>WELCOME!</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat dolorem itaque cupiditate quis tempore
-            fugiat est iure soluta doloribus quibusdam ipsum deleniti, officiis eveniet quia nisi reprehenderit harum
-            sit nulla et modi nostrum animi alias ad veritatis. Id ab iusto, ullam dolorem repellat vitae error! Dolore
-            exercitationem deleniti consectetur sit.</p>
+            fugiat est iure soluta doloribus quibusdam ipsum deleniti.</p>
         <button><a href="about.html">vores mission</a></button>
+        </div>
+        </article>
     </section>
 
     <section id="overskriftdata">
