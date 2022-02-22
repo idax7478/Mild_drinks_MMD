@@ -232,7 +232,7 @@
         <button class="filter" data-kategori="rom">Rom</button>
         <button class="filter" data-kategori="gin">Gin</button>
         <button class="filter" data-kategori="whiskey">Whiskey</button>
-        <button class="filter" data-kategori="andet">Andet</button>
+        <button class="filter" data-kategori="Andet">Andet</button>
 
     </nav>
 
@@ -296,7 +296,7 @@
         function visJson(x) {
             beholder.textContent = "";
             x.forEach(drik => {
-                if (drik.ingredienser.toLowerCase().includes(filter) || filter == "alle" || andet == drik.kategori) {
+                if (drik.ingredienser.toLowerCase().includes(filter) || filter == "alle" || drik.kategori.includes(filter)) {
                     const klon = template.cloneNode(true).content;
                     klon.querySelector("h3").textContent = drik.navn;
                     console.log(drik.navn);
