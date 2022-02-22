@@ -96,6 +96,12 @@
                 
             }
 
+            .emg {
+                /*Place self center centrerer elementet i grid*/
+            place-self: center;
+            padding: 1rem;
+            }
+
      @media (max-width: 900px) {
 
             .grid {
@@ -103,6 +109,11 @@
             grid-template-columns: none;
             grid-template-rows: auto;
             }    
+
+            .emg {
+                padding: 3rem;
+            }
+
 
             button {
             padding: 10px 21px;
@@ -155,7 +166,9 @@
 
     
     <article class="grid">
+        <div class="emg">
         <img class="image" src="" alt="">
+        </div>
 
         <section>
             <h2></h2>
@@ -216,7 +229,9 @@
             document.querySelector(".oprindelse").textContent = drink.oprindelse;
         }
 
+        
     </script>
+    <script src="java.js"></script>
 
 </body>
 

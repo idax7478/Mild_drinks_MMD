@@ -87,7 +87,7 @@ ul li a:hover {
   .menu {
     position: fixed;
     left: -100%;
-    top: 5.1rem;
+    top: 6rem;
     flex-direction: column;
     background-color: rgb(250, 204, 120);
     width: 100%;
@@ -99,7 +99,7 @@ ul li a:hover {
   }
 
   nav ul li a {
-    color: black;
+    color: rgb(255, 89, 89);
   }
 
   li:hover {
