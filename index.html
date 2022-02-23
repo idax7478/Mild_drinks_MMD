@@ -17,22 +17,6 @@
             max-width: 300px;
         }
 
-        p {
-            font-family: source serif pro;
-            line-height: 1.3;
-            padding-left: 2%;
-            padding-right: 2%;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: barlow;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-
-        }
-
         .h1 {
             text-align: center;
             padding-bottom: 2%;
@@ -129,13 +113,13 @@
             font-size: 2rem;
             color: rgb(250, 115, 115);
             font-family: source serif pro;
-            text-transform:capitalize;
+            text-transform: capitalize;
             padding-inline: 1rem;
             text-shadow: 6px 6px 5px #1b1b1b;
-            
+
 
         }
-        
+
 
         @media (min-width: 650px) {
             #splash h2 {
@@ -197,20 +181,19 @@
             color: white;
         }
 
-@media (max-width: 600px) {
-    
-    .filternav {
-        margin: 1rem;
-    }
+        @media (max-width: 600px) {
 
-    #splash h3 {
-        padding-inline: 1rem;
-        font-size: 2rem;
-        text-transform: capitalize;
-    }
+            .filternav {
+                margin: 1rem;
+            }
 
-}
+            #splash h3 {
+                padding-inline: 1rem;
+                font-size: 2rem;
+                text-transform: capitalize;
+            }
 
+        }
     </style>
 </head>
 
@@ -274,44 +257,45 @@
         </template>
     </section>
 
-<footer>
+    <footer>
 
-    <div class="footlogo">
-        <a href="index.html">
-            <img src="logo_mild_roed.svg" class="logo2" alt="logo2" />
-        </a>
-    </div>
+        <div class="footlogo">
+            <a href="index.html">
+                <img src="logo_mild_roed.svg" class="logo2" alt="logo2" />
+            </a>
+        </div>
 
-    <div class="footertext">
-        <h4 class="footer1">Mild Cocktail Database</h4>
-        <h5>Tranebærsaftvej 173.</h5>
-        <h5>København, Danmark</h5>
-        <h6 class="footer2">Kontakt: <a class="email" href="mailto: abc@example.com">Mild-drinks@gmail.com</a></h6>
-    </div>
+        <div class="footertext">
+            <h4 class="footer1">Mild Cocktail Database</h4>
+            <h5>Tranebærsaftvej 173.</h5>
+            <h5>København, Danmark</h5>
+            <h6 class="footer2">Kontakt: <a class="email" href="mailto: abc@example.com">Mild-drinks@gmail.com</a></h6>
+        </div>
 
-    <div class="partthree">
-        <h4>Find out more</h4>
+        <div class="partthree">
+            <h4>Find out more</h4>
 
-        <a href="https://www.facebook.com/kea.dk">
-            <img class="fejs" src="fjsbk.svg" alt="fb"></a>
+            <a href="https://www.facebook.com/kea.dk">
+                <img class="fejs" src="fjsbk.svg" alt="fb"></a>
 
-        <a href="https://www.instagram.com/keacph/?hl=da">
-            <img src="instgrm.svg" alt="insta"></a>
+            <a href="https://www.instagram.com/keacph/?hl=da">
+                <img src="instgrm.svg" alt="insta"></a>
 
-        <a href="https://www.linkedin.com/school/kea-k-benhavns-erhvervsakademi/">
-            <img src="lnkdin.svg" alt="linked"></a>
+            <a href="https://www.linkedin.com/school/kea-k-benhavns-erhvervsakademi/">
+                <img src="lnkdin.svg" alt="linked"></a>
 
-        <a href="https://www.youtube.com/c/KEAkanal">
-            <img src="yutub.svg" alt="yutub"></a>
-    </div>
+            <a href="https://www.youtube.com/c/KEAkanal">
+                <img src="yutub.svg" alt="yutub"></a>
+        </div>
 
 
-</footer>
+    </footer>
 
     <script>
 
         document.addEventListener("DOMContentLoaded", hentData);
 
+        /* Giver adgang til data fra restdb*/
         const url = "https://mildcocktails-71e4.restdb.io/rest/drinks";
         const options = {
             headers: {
@@ -322,23 +306,27 @@
         const beholder = document.querySelector("main");
         const template = document.querySelector("template");
 
-        let andet = "andet";
         let filter = "alle";
         let drinks;
 
-
+        /* Henter data fra restdb*/
         async function hentData() {
             const respons = await fetch(url, options);
+
+            /* Laver variabel på array af drinks og logger dem*/
             drinks = await respons.json();
             console.log(drinks);
+
+            /* Starter tre funktioner: Sender drinks-data med visJson */
             visJson(drinks);
+
             addEventListenersToButtons();
 
             const filterKnapper = document.querySelectorAll("nav button");
             filterKnapper.forEach(knap => knap.addEventListener("click", filtrerDrinks));
         }
 
-
+        /* Laver en html-klon til hvert data-objekt */
         function visJson(x) {
             beholder.textContent = "";
             x.forEach(drik => {
@@ -358,12 +346,14 @@
         hentData(url);
 
 
-
+        /* Lægger eventListeners på filtreringsknapper og sender videre til filtrering */
         function addEventListenersToButtons() {
             document.querySelectorAll(".filter").forEach(elm => {
                 elm.addEventListener("click", filtrering);
             })
         }
+
+        /* Filterer indhold efter ingrediens og ændrer h1 */
         function filtrering() {
             filter = this.dataset.kategori;
             document.querySelector(".h1").textContent = this.textContent;
@@ -374,12 +364,14 @@
             visJson();
         }
 
+
         function filtrerDrinks() {
             filter = this.dataset.kategori;
 
             visJson(drinks);
         }
 
+        /* Sender til detalje.html ved klik */
         function visDetaljer(drik) {
             location.href = `detalje.html?id=${drik._id}`;
         }
