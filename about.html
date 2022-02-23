@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT US</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
 
     <style>
         p {
@@ -37,6 +39,101 @@
             background-attachment: fixed;
             background-position: 100% 800%;
             padding-top: 7rem;
+            background-size: cover;
+
+        }
+
+        #fourth_section a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        #fourth_section h4 {
+            color: rgb(250, 115, 115);
+            text-shadow: 1px 1px 0px whitesmoke;
+            margin-bottom: 1rem;
+        }
+
+        #second_section h4,
+        #third_section h4 {
+            font-size: 2rem;
+            color: rgb(250, 115, 115);
+            text-shadow: 1px 1px 0px whitesmoke;
+        }
+
+
+
+        .knap {
+            font-family: barlow;
+            background-color: rgb(255, 255, 255);
+            padding: 10px 35px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-style: solid;
+            border-radius: 10px;
+            transition-duration: 0.4s;
+            border-color: rgb(250, 115, 115);
+            border-width: 3px;
+            text-decoration: rgb(250, 115, 115);
+        }
+
+        .knap:hover {
+            transform: scale(1.1);
+            color: #ffffff;
+            background-color: rgb(250, 115, 115);
+        }
+
+
+
+
+
+
+
+        h1,
+        h2,
+        h3 {
+            color: white;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        h1 {
+            font-size: rem;
+            padding-top: 4rem;
+        }
+
+        h2 {
+            font-size: 5rem;
+            padding-top: 3rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        #second_section p,
+        #third_section p {
+            padding-bottom: 1rem;
+            padding-inline: 2rem;
+        }
+
+
+
+        @media (min-width: 600px) {
+
+            #fourth_section {
+                padding-right: 15rem;
+
+            }
+
+            #fourth_section h4 {
+                font-size: 2rem;
+                padding-bottom: 5px;
+            }
 
         }
 
@@ -113,6 +210,13 @@
             padding-inline: 2rem;
         }
 
+        #fourth_section {
+            /* padding-top: 4rem;
+      background-attachment: scroll; */
+            /* background-size: cover; */
+            background-position: 90% 80%;
+            object-fit: cover;
+        }
 
 
         @media (min-width: 600px) {
@@ -329,7 +433,7 @@
         <div class="bottombuttondiv">
             <h4>READY TO BROWSE?</h4>
             <ul>
-                <li class="knap"><a href="index.html">TO COCKTAILS</a></li>
+                <a href="index.html"><button class="knap">Alle</button></a>
             </ul>
         </div>
 
@@ -337,16 +441,38 @@
 
     <footer>
 
-        <a href="index.html">
-            <img src="logo_mild_roed.svg" class="logo2" alt="logo2" />
-        </a>
+        <div class="footlogo">
+            <a href="index.html">
+                <img src="logo_mild_roed.svg" class="logo2" alt="logo2" />
+            </a>
+        </div>
 
         <div class="footertext">
             <h4 class="footer1">Mild Cocktail Database</h4>
-
-            <h5 class="footer2">Copenhagen, Denmark</h5>
-
+            <h5>Tranebærsaftvej 173.</h5>
+            <h5>København, Danmark</h5>
+            <h6 class="footer2">Kontakt: <a class="email" href="mailto: abc@example.com">Mild-drinks@gmail.com</a></h6>
         </div>
+
+        <div class="partthree">
+            <h4>Find out more</h4>
+
+            <a href="https://www.facebook.com/kea.dk">
+                <img class="fejs" src="fjsbk.svg" alt="fb"></a>
+
+            <a href="https://www.instagram.com/keacph/?hl=da">
+                <img src="instgrm.svg" alt="insta"></a>
+
+            <a href="https://www.linkedin.com/school/kea-k-benhavns-erhvervsakademi/">
+                <img src="lnkdin.svg" alt="linked"></a>
+
+            <a href="https://www.youtube.com/c/KEAkanal">
+                <img src="yutub.svg" alt="yutub"></a>
+        </div>
+
+
+
+
 
 
 

@@ -67,13 +67,14 @@ ul li a:hover {
   background-color: red;
 }
 
-@media (min-width: 650px){
-.logo{
-  position:absolute;
-  width: 9%;
-  top: 0.2rem;
-  left: 0.5rem;
-}}
+@media (min-width: 650px) {
+  .logo {
+    position: absolute;
+    width: 9%;
+    top: 0.2rem;
+    left: 0.5rem;
+  }
+}
 
 /* burgermenu center og under hinanden */
 .menu {
@@ -91,11 +92,11 @@ ul li a:hover {
 
 /* -------media------ */
 
-@media (min-width: 650px){
+@media (min-width: 650px) {
   .navbar {
     padding: 2.2rem;
   }
-  }
+}
 
 @media only screen and (max-width: 768px) {
   /* Burgermenuen, farve, placering */
@@ -174,38 +175,97 @@ ul li a:hover {
 }
 
 footer {
-  background-color: white;
+  /* background-color: white;
   display: flex;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .footertext {
   margin: 0 auto;
+  padding-top: 2rem;
+  text-align: center;
 }
 
-.footer1,
-.footer2 {
+footer h6 {
+  font-size: 1rem;
 }
 
 .footer2 {
   font-weight: normal;
-  font-size: 1rem;
-  padding-bottom: 0.5rem;
-  margin-right: 6rem;
+  font-size: 0.8rem;
+}
+
+footer h6 a {
+  color: rgb(253, 109, 133);
+  font-weight: bold;
+}
+
+.partthree {
+  justify-self: right;
+  padding-right: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  font-family: "Merriweather", serif;
+  padding-top: 2rem;
+}
+
+.partthree img {
+  width: 20%;
+  height: auto;
+}
+
+footer h5 {
+  font-weight: normal;
+}
+
+.partthree img:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
+  .footlogo {
+    text-align: center;
+  }
+
   .logo2 {
-    width: 60px;
-    margin-left: 1.2rem;
+    margin: 0;
+    padding-top: 1rem;
+  }
+
+  footer {
+    display: block;
   }
 
   .footer2 {
-    padding-bottom: 1rem;
+    margin-inline: 0;
   }
 
   .footer1,
   .footer2 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  footer h5 {
+    font-size: 0.9rem;
+  }
+
+  .partthree {
+    justify-self: center;
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 1.5rem;
+    padding-right: 0;
+  }
+
+  .partthree img {
+    width: 7%;
+    height: auto;
+    padding-top: 0.1rem;
+    padding-inline: 0.1rem;
   }
 }
