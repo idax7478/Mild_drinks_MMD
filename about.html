@@ -48,35 +48,38 @@
 }
 
 #fourth_section h4 {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: rgb(250, 115, 115);
+text-shadow: 1px 1px 0px whitesmoke;
+margin-bottom: 1rem;
 }
 
 #second_section h4, #third_section h4 {
     font-size: 2rem;
 }
 
-#fourth_section a {
-    text-decoration: none;
-    color: #ffffff;
-}
+
 
 .knap {
-background-color: rgb(0, 0, 0);
-  /* border: 2px solid black; */
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+font-family: barlow;
+background-color: rgb(255, 255, 255);
+padding: 10px 35px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
   cursor: pointer;
+  border-style: solid;
   border-radius: 10px;
-   transition-duration: 0.4s;
+transition-duration: 0.4s;
+border-color: rgb(250, 115, 115);
+border-width: 3px;
+text-decoration: rgb(250, 115, 115);
 }
            
 .knap:hover{
 transform: scale(1.1);
-background-color: rgb(80, 80, 80);
+color: #ffffff;
+background-color: rgb(250, 115, 115);
 }
 
 
@@ -193,7 +196,8 @@ h3 {
       /* padding-top: 4rem;
       background-attachment: scroll; */
       /* background-size: cover; */
-      background-position: 90% -100%;
+      background-position: 90% 80%;
+      object-fit: cover;
   }
 
  #third_section {
@@ -315,7 +319,7 @@ drinks.</p>
     <div class="bottombuttondiv">
         <h4>READY TO BROWSE?</h4>
         <ul>
-            <li class="knap"><a  href="index.html">TO COCKTAILS</a></li>
+           <a href="index.html"><button class="knap" >Alle</button></a>
         </ul>
     </div>
 

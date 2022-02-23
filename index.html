@@ -126,11 +126,16 @@
         }
 
         #splash h3 {
-            font-size: 1.3rem;
+            font-size: 2rem;
             color: rgb(250, 115, 115);
             font-family: source serif pro;
-            text-transform: lowercase;
+            text-transform:capitalize;
+            padding-inline: 1rem;
+            text-shadow: 6px 6px 5px #1b1b1b;
+            
+
         }
+        
 
         @media (min-width: 650px) {
             #splash h2 {
@@ -191,6 +196,21 @@
             background-color: rgb(250, 115, 115);
             color: white;
         }
+
+@media (max-width: 600px) {
+    
+    .filternav {
+        margin: 1rem;
+    }
+
+    #splash h3 {
+        padding-inline: 1rem;
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+
+}
+
     </style>
 </head>
 
