@@ -70,24 +70,28 @@
         }
 
         button {
-            font-family: barlow;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 10px;
-            margin-top: 2%;
-            margin-bottom: 2%;
-            border-radius: 0;
-            border-style: solid;
-            border: 1%;
-            background-color: white;
-            border-color: rgb(250, 115, 115);
-            text-decoration: rgb(250, 115, 115);
-        }
+font-family: barlow;
+background-color: rgb(255, 231, 231);
+padding: 10px 35px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+  cursor: pointer;
+  border-style: solid;
+  border-radius: 7px;
+transition-duration: 0.4s;
+border-color: rgb(250, 115, 115);
+border-width: 3px;
+text-decoration: rgb(250, 115, 115);
 
-        button:hover {
-            background-color: rgb(250, 115, 115);
-            color: white;
-        }
+}
+
+        button:hover{
+transform: scale(1.1);
+color: #ffffff;
+background-color: rgb(250, 115, 115);
+}
 
         button a {
             text-decoration: none;
@@ -105,7 +109,6 @@
         }
 
         .emg {
-            /*Place self center centrerer elementet i grid*/
             place-self: center;
             padding: 1rem;
         }
@@ -127,9 +130,10 @@
                 padding: 10px 21px;
                 font-size: 12px;
                 margin: 4px 2px;
-                cursor: pointer;
                 border-radius: 4px;
             }
+
+            
 
 
             .cont {
@@ -142,8 +146,12 @@
                 padding-right: 2rem;
                 padding-left: 2rem;
             }
-
         }
+        
+    
+
+
+
     </style>
 </head>
 
@@ -184,7 +192,7 @@
             <h3>Historie</h3>
             <p class="oprindelse"></p>
             <div class="cont">
-                <button><a href="index.html">Tilbage</a> </button>
+               <a href="index.html"><button>TILBAGE</button></a>
             </div>
         </section>
 
@@ -221,6 +229,8 @@
                 <img src="yutub.svg" alt="yutub"></a>
         </div>
     </footer>
+
+
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);

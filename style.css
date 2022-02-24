@@ -186,8 +186,8 @@ ul li a:hover {
 }
 
 footer {
-  /* background-color: white;
-  display: flex;
+  background-color: white;
+  /*display: flex;
   align-items: center; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
