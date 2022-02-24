@@ -8,8 +8,11 @@ img {
   width: 100%;
 }
 
-h1, h2, h3, h4 {
-  font-family: barlow;  
+h1,
+h2,
+h3,
+h4 {
+  font-family: barlow;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -21,8 +24,6 @@ p {
   padding-right: 2%;
 }
 /* _________HEADER & BURGER MENU__________________ */
-
-
 
 .navbar {
   /* height: 12%; */
@@ -52,6 +53,7 @@ nav ul li {
   list-style: none;
   display: inline-block;
   margin-left: 50px;
+  font-size: 1.5rem;
 }
 
 nav ul li a {
@@ -78,7 +80,7 @@ ul li a:hover {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: red;
+  background-color: rgb(250, 115, 115);
 }
 
 @media (min-width: 650px) {
@@ -114,7 +116,7 @@ ul li a:hover {
   .menu {
     position: fixed;
     left: -100%;
-    top: 6rem;
+    top: 5.7rem;
     flex-direction: column;
     background-color: rgb(250, 204, 120);
     width: 100%;
