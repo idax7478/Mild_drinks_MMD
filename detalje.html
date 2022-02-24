@@ -70,23 +70,28 @@
         }
 
         button {
-            background-color: rgb(212, 244, 197);
-            border: none;
-            color: black;
-            padding: 15px 32px;
-            text-align: center;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition-duration: 0.4s;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-        }
+font-family: barlow;
+background-color: rgb(255, 231, 231);
+padding: 10px 35px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+  cursor: pointer;
+  border-style: solid;
+  border-radius: 10px;
+transition-duration: 0.4s;
+border-color: rgb(250, 115, 115);
+border-width: 3px;
+text-decoration: rgb(250, 115, 115);
 
-        button:hover {
-            transform: scale(1.1);
-        }
+}
+
+        button:hover{
+transform: scale(1.1);
+color: #ffffff;
+background-color: rgb(250, 115, 115);
+}
 
         button a {
             text-decoration: none;
@@ -99,7 +104,6 @@
         }
 
         .emg {
-            /*Place self center centrerer elementet i grid*/
             place-self: center;
             padding: 1rem;
         }
@@ -121,9 +125,10 @@
                 padding: 10px 21px;
                 font-size: 12px;
                 margin: 4px 2px;
-                cursor: pointer;
                 border-radius: 4px;
             }
+
+            
 
 
             .cont {
@@ -136,8 +141,12 @@
                 padding-right: 2rem;
                 padding-left: 2rem;
             }
-
         }
+        
+    
+
+
+
     </style>
 </head>
 
@@ -178,7 +187,7 @@
             <h3>Historie</h3>
             <p class="oprindelse"></p>
             <div class="cont">
-                <button><a href="index.html">Tilbage</a> </button>
+               <a href="index.html"><button>TILBAGE</button></a>
             </div>
         </section>
 
@@ -215,6 +224,8 @@
             <img src="yutub.svg" alt="yutub"></a>
     </div>
 </footer>
+
+
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
