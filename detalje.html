@@ -26,12 +26,15 @@
             margin-top: 3rem;
             margin-bottom: 2rem;
             text-align: center;
+            font-size: 2rem;
 
         }
 
         h3 {
             padding-left: 2rem;
             padding-bottom: 0.2rem;
+            color: rgb(230, 104, 104);
+            font-size: 1.2rem;
         }
 
         .grid p {
@@ -120,6 +123,7 @@ background-color: rgb(250, 115, 115);
                 display: grid;
                 grid-template-columns: none;
                 grid-template-rows: auto;
+                margin-inline: 6rem;
             }
 
             .emg {
@@ -149,6 +153,12 @@ background-color: rgb(250, 115, 115);
             }
         }
         
+         @media (max-width: 600px) {
+
+            .grid {
+                margin-inline: 2rem;
+            }
+        }
     
 
 

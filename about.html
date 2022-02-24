@@ -12,21 +12,24 @@
     <link rel="icon" type="image/x-icon" href="favicon.svg">
 
     <style>
-        p {
-            line-height: 1.5rem;
-        }
+        
 
         #first_section {
-            display: grid;
             height: 65vh;
             width: 100%;
             background-image: url(oke.webp);
             background-size: cover;
             background-repeat: no-repeat;
+            /* background-attachment: fixed = billedet flytter sig ikke med siden, 
+            men bliver i baggrunden. Det skaber denne simple parallax effekt */
             background-attachment: fixed;
             background-position: 50% 60%;
-            place-items: center;
+           
         }
+
+         #first_section h1 { 
+            padding-top: 10rem;
+         }
 
         .bottombuttondiv {
             text-align: center;
@@ -46,6 +49,10 @@
 
         }
 
+        p {
+            line-height: 1.5rem;
+        }
+
         #fourth_section a {
             text-decoration: none;
             color: #ffffff;
@@ -61,7 +68,7 @@
         #third_section h4 {
             font-size: 2rem;
             color: rgb(230, 104, 104);
-            text-shadow: 1px 1px 0px whitesmoke;
+           
         }
 
 
@@ -313,6 +320,10 @@
 
             #first_section {
                 margin-bottom: 1rem;
+            }
+
+            #first_section h1 {
+                padding-top: 15rem;
             }
         }
     </style>
